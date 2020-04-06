@@ -229,23 +229,28 @@ section.page.about >.thumb{
     position: relative;
     border-radius: 4px;
     text-align: center;
-    box-shadow: 0 0 4px var(--grey);
+    box-shadow: 0 0 4px var(--danger);
 }
-.grid>.item::after{
+.grid>.item>.overlay{
     top: 0;
     left: 0;
     width: 100%;
-    content: '';
     height: 100%;
+    display: flex;
+    padding: 30px;
+    font-weight: bold;
     visibility: hidden;
     position: absolute;
+    color: var(--light);
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-.grid>.item:hover::after{
+.grid>.item:hover .overlay{
     visibility: visible;
 }
 .grid>.item>.thumb{
